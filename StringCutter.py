@@ -2,7 +2,7 @@ import os
 import pathlib
 import sys
 
-def resolve_space(directory): #CORROMPE? o.o
+def resolve_space(directory): 
     for filename in os.listdir(directory): #per ogni file name in LISTA 
         file_old_name = os.path.join(directory, filename)
         file_new_name = os.path.join(directory, filename.replace(" ", "_"))
