@@ -2,6 +2,25 @@ import os
 import pathlib
 import sys
 
+
+#PIGGIOGGIO <3
+#UNSTABLE(CAN KILL A FILE mangiandosi il titolo o.o)
+def redux(directory,x): #Rimuovi i primi x caratteri
+    for filename in os.listdir(directory): #per ogni file name in LISTA 
+        if filename == sys.argv[0]:
+            continue
+        if len(filename) - x >= 5 :
+        #TEST
+        #  48 (x.mp3)     48
+        #  len(filename) -x  >= 5 ok             
+            file_old_name = os.path.join(directory, filename)
+            file_new_name = os.path.join(directory, filename[x:])
+            os.rename(file_old_name, file_new_name)
+        else :
+            print("You can't cut ",filename," too much!Skip!")
+
+
+
 def resolve_space(directory): 
     for filename in os.listdir(directory): #per ogni file name in LISTA 
         file_old_name = os.path.join(directory, filename)
